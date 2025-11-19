@@ -21,7 +21,7 @@
             <Label Text="Edad"    Grid.Column="3" FontAttributes="Bold"/>
         </Grid>
 
-        <ListView x:Name="listaEstudiantes" HasUnevenRows="True" HorizontalOptions="Center" WidthRequest="460">
+        <ListView x:Name="listaEstudiantes" HasUnevenRows="True" HorizontalOptions="Center" WidthRequest="460" ItemSelected ="listaEstudiantes_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -35,6 +35,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        <Button x:Name="btnAgregar"
+                Text="Agregar Estudiante"
+                Clicked="btnAgregar_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
